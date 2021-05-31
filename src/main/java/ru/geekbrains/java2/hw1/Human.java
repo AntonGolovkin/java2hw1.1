@@ -24,24 +24,24 @@ public class Human implements Team{
     }
 
     @Override
-    public void cross() {
-        if (distance >= cross_distance) {
-            System.out.println("чувак [" + name + "]: пробежал");
+    public void treadmill() {
+        if (distance >= treadmill_distance) {
+            System.out.println(name + " Пробежал!");
         } else
-            System.out.println("чувак [" + name + "]: я ленивый, я столько не бегаю");
+            System.out.println(name + " Не смог пробежать");
     }
 
     @Override
     public void jump() {
         if (jump_length >= wall_size)
-            System.out.println("чувак [" + name + "]: перепрыгнул");
+            System.out.println(name + " Перепрыгнул!");
         else
-            System.out.println("чувак [" + name + "]: я не могу так прыгать");
+            System.out.println(name + " Не смог перепрыгнуть");
     }
     @Override
     public boolean chek() {
 
-        if (distance>=cross_distance){
+        if (distance >= treadmill_distance){
             jump();
         }
         return false;
