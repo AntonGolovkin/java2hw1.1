@@ -1,14 +1,14 @@
 package ru.geekbrains.java2.hw1;
 
 public interface Team {
-    int wall_size=100;
+    int wall_size=10;
     void jump();
 
-    int cross_distance=200;
-    void cross();
+    int treadmill_distance=100;
+    void treadmill();
 
     default boolean chek() {
-        cross();
+        treadmill();
         jump();
         return true;
     }

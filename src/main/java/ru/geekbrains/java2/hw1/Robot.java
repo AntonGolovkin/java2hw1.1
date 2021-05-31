@@ -25,25 +25,25 @@ public class Robot implements Team{
     private int jump_length;
 
     @Override
-    public void cross() {
-        if (distance >= cross_distance) {
-            System.out.println("Робот [" + name + "]: Пробежал!");
+    public void treadmill() {
+        if (distance >= treadmill_distance) {
+            System.out.println(name + " Пробежал!");
         } else
-            System.out.println("Робот [" + name + "]: Не смог пробежать");
+            System.out.println(name + " Не смог пробежать");
     }
 
     @Override
     public void jump() {
         if (jump_length >= wall_size)
-            System.out.println("Робот [" + name + "]: Перепрыгнул!");
+            System.out.println(name + " Перепрыгнул!");
         else
-            System.out.println("Робот [" + name + "]: Не смог перепрыгнуть");
+            System.out.println(name + " Не смог перепрыгнуть");
     }
 
     @Override
     public boolean chek() {
 
-        if (distance >= cross_distance) {
+        if (distance >= treadmill_distance) {
             jump();
         }
         return false;
